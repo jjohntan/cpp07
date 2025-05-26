@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 12:52:21 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/26 12:56:55 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/26 15:01:55 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,15 @@ void swap(T &a, T &b)
 }
 
 template <typename T>
-T min(T &a, T &b)
+T min(T const &a, T const &b)
 {
-	return (a < b) ? a : b;
+	return (a < b ? a : b);
 }
 
 template <typename T>
-T max(T &a, T &b)
+T max(T const &a, T const &b)
 {
-	return (a > b) ? a : b;
+	return (a > b ? a : b);
 }
 
 #endif
