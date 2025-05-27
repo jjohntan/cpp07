@@ -1,7 +1,6 @@
 NAME = a.out
 
-SRCS = main.cpp \
-		Array.tpp
+SRCS = main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
