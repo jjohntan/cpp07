@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 16:48:52 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/27 14:33:30 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/28 14:56:58 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,13 @@ class Array
 		{
 			delete[] arr;
 		}
-		unsigned int size() const;
+		T &operator[](unsigned int index)
+		{
+			if (index >= _size)
+				throw outOfBounds();
+			return arr[index];
+		}
+		unsigned int size() const
 		class outOfBounds: public std::exception
 		{
 			public:
