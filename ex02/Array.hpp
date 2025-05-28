@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 16:48:52 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/28 14:56:58 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/28 14:57:38 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,9 @@ class Array
 			return arr[index];
 		}
 		unsigned int size() const
+		{
+			return _size;
+		}
 		class outOfBounds: public std::exception
 		{
 			public:
