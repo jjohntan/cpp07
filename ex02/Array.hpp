@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 16:48:52 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/28 14:57:38 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/28 18:53:25 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,13 @@ class Array
 		}
 		Array &operator=(const Array &other)
 		{
-			if (this != other)
+			if (this != &other)
 			{
-				this->arr = other.arr;
 				if (arr != NULL)
 					delete[] arr;
+				_size = other._size;
 				arr = new T[_size];
-				for (int i = 0; i < _size; i++)
+				for (unsigned int i = 0; i < _size; i++)
 					this->arr[i] = other.arr[i];
 			}
 			return *this;
