@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 16:48:55 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/29 15:27:51 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/29 16:42:16 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,6 +137,7 @@ void array_of_elements()
 		std::cout << "str[" << i << "] = ";
 		std::cout << str[i] << std::endl;
 	}
+	delete a;
 }
 
 //Creates an empty array
