@@ -6,7 +6,7 @@
 /*   By: jetan <jetan@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 16:48:52 by jetan             #+#    #+#             */
-/*   Updated: 2025/05/28 18:53:25 by jetan            ###   ########.fr       */
+/*   Updated: 2025/05/29 14:52:35 by jetan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,23 @@ class Array
 		T *arr;
 		unsigned int _size;
 	public:
+		//defualt constructor
 		Array()
 		{
 			arr = NULL;
 			_size = 0;
 		}
+		//parameter constructor
 		Array(unsigned int n): _size(n)
 		{
 			arr = new T[n];
 		}
-		Array(const Array &other)
+		//copy constructor
+		Array(const Array &other): arr(NULL), _size(0)
 		{
 			*this = other;
 		}
+		//copy assignment operator
 		Array &operator=(const Array &other)
 		{
 			if (this != &other)
@@ -48,10 +52,12 @@ class Array
 			}
 			return *this;
 		}
+		//destructor
 		~Array()
 		{
 			delete[] arr;
 		}
+		//subscript operator
 		T &operator[](unsigned int index)
 		{
 			if (index >= _size)
@@ -62,6 +68,7 @@ class Array
 		{
 			return _size;
 		}
+		//exception
 		class outOfBounds: public std::exception
 		{
 			public:
